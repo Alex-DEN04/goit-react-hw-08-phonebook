@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/react-homework-template/static/js/main.fed707ac.js",
-    "index.html": "/react-homework-template/index.html",
-    "main.fed707ac.js.map": "/react-homework-template/static/js/main.fed707ac.js.map"
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.61aed464.js",
+    "index.html": "/goit-react-hw-08-phonebook/index.html",
+    "main.61aed464.js.map": "/goit-react-hw-08-phonebook/static/js/main.61aed464.js.map"
   },
   "entrypoints": [
-    "static/js/main.fed707ac.js"
+    "static/js/main.61aed464.js"
   ]
 }
