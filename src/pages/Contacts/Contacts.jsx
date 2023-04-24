@@ -5,7 +5,7 @@ import { Filter } from '../../components/Filter/Filter';
 
 import React from 'react';
 
-export const Contacts = () => {
+export default function Contacts () {
   return (
     <>
       <Title title={'Phonebook'}></Title>

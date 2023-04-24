@@ -17,7 +17,7 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().required(),
 });
 
-export const Register = () => {
+export default function Register () {
   const dispatch = useDispatch();
   const handleSubmit = (values, actions) => {
     values.id = nanoid();

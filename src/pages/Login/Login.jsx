@@ -12,7 +12,7 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().required(),
 });
 
-export const Login = () => {
+export default function Login () {
   const dispatch = useDispatch();
   const handleSubmit = (values, { resetForm }) => {
     dispatch(login(values));
