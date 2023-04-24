@@ -1,6 +1,6 @@
 import { ContactList } from '../../components/ContactList/ContactList';
 import { Title } from '../../components/Title/Title';
-import { ContactForm } from '../../components/Phonebook/Phonebook';
+import { ContactForm } from '../../components/ContactForm/ContactForm';
 import { Filter } from '../../components/Filter/Filter';
 
 import React from 'react';

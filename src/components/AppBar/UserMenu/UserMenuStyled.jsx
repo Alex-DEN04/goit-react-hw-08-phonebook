@@ -1,10 +1,5 @@
 import styled from '@emotion/styled';
-// import { Button } from 'components/Contact/Contact.styled';
-// import { NavLink } from 'react-router-dom'
-
 export const Button = styled.button`
-  /* display: flex; */
-  /* align-items: center; */
   font-family: ${p => p.theme.fonts.body};
   font-size: ${p => p.theme.fontSizes.m};
   font-weight: ${p => p.theme.fontWeights.normal};

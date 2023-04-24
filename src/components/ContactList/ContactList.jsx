@@ -2,9 +2,9 @@ import { Box } from 'components/Box';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
-import { fetchContacts } from 'redux/contacts/operations';
+import { fetchContacts } from 'redux/contacts/contactsOperations';
 import { Contact } from '../Contact/Contact';
-import { Item } from 'components/Contact/Contact.styled';
+import { Item } from './ContactListStyled';
 import { getContacts, getError, getFilter } from 'redux/selectors';
 
 export const ContactList = () => {

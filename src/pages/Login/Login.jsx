@@ -1,4 +1,3 @@
-import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
@@ -15,9 +14,9 @@ const validationSchema = Yup.object().shape({
 
 export const Login = () => {
   const dispatch = useDispatch();
-  const handleSubmit = (values, actions) => {
+  const handleSubmit = (values, { resetForm }) => {
     dispatch(login(values));
-    actions.resetForm();
+    resetForm();
   };
 
   return (

@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
-import { Contacts } from '../../pages/Contacts/Contacts';
+import { Contacts } from './pages/Contacts/Contacts';
 import { Register } from 'pages/Register/Register';
 import { Login } from 'pages/Login/Login';
 import { Home } from 'pages/Home/Home';

@@ -4,7 +4,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from 'redux/selectors';
-import { addContact } from '../../redux/contacts/operations';
+import { addContact } from '../../redux/contacts/contactsOperations';
 
 import {
   FormStyled,
@@ -13,7 +13,7 @@ import {
   ErrorText,
   Label,
   Button,
-} from './Phonebook.styled';
+} from './ContactFormStyled';
 
 const FormError = ({ name }) => {
   return (
@@ -40,11 +40,14 @@ export const ContactForm = () => {
   const handleSubmit = (values, actions) => {
     values.id = nanoid();
     actions.resetForm();
-    for (const item of items) {
-      if (item.name.toLowerCase() === values.name.toLowerCase()) {
-        return alert(`${values.name} is already in contacts`);
-      }
+
+    const existsName = items.some(
+      ({ name }) => name.toLowerCase() === values.name.toLowerCase()
+    );
+    if (existsName) {
+      return alert(`${values.name} is already in contacts`);
     }
+
     dispatch(addContact(values));
   };
 
