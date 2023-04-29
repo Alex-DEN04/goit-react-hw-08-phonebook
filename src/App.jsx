@@ -3,15 +3,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, lazy } from 'react';
 
 import { SharedLayoud } from 'components/SharedLayoud/SharedLayoud';
-import { fetchCurrentUser } from 'redux/auth/authOperation';
+import { fetchCurrentUser } from 'redux/index';
 import { RestrictedRoute } from 'components/RestrictedRoute/RestrictedRoute';
 import { PrivateRoute } from 'components/PrivateRoute/PrivateRoute';
-import { getIsRefreshing } from 'redux/selectors';
+import { getIsRefreshing } from 'redux/index';
 
 const Contacts = lazy(() => import('./pages/Contacts/Contacts'));
 const Register = lazy(() => import('pages/Register/Register'));
 const Login = lazy(() => import('pages/Login/Login'));
-const Home = lazy(() => import  ('pages/Home/Home'));
+const Home = lazy(() => import('pages/Home/Home'));
 
 export default function App() {
   const dispatch = useDispatch();

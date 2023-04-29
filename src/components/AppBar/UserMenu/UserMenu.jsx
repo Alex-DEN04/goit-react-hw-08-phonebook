@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
-
 import { Box } from 'components/Box';
-import { logout } from 'redux/auth/authOperation';
-import { getEmail } from 'redux/selectors';
+
+import { logout } from 'redux/index';
+import { getEmail } from 'redux/index';
 import { Button, Email } from './UserMenuStyled';
 
 export const UserMenu = () => {

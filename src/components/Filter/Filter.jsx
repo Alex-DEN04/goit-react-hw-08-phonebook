@@ -1,7 +1,7 @@
 import { Box } from 'components/Box';
 import { useDispatch } from 'react-redux';
 
-import { setFilter } from 'redux/filter/filterActions';
+import { setFilter } from 'redux/index';
 import { Label, Input } from './Filter.styled';
 
 export const Filter = () => {

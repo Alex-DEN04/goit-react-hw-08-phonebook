@@ -1,9 +1,9 @@
-import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { nanoid } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
-import { register } from 'redux/auth/authOperation';
+
+import { register } from 'redux/index';
 
 const initialValues = {
   id: '',
@@ -17,7 +17,7 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().required(),
 });
 
-export default function Register () {
+export default function Register() {
   const dispatch = useDispatch();
   const handleSubmit = (values, actions) => {
     values.id = nanoid();
@@ -46,4 +46,4 @@ export default function Register () {
       </Formik>
     </>
   );
-};
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavMenu } from './NavigationStyled';
 import { useSelector } from 'react-redux';
-import { getIsLoggedIn } from 'redux/selectors';
+import { getIsLoggedIn } from 'redux/index';
 
 export const Navigation = () => {
   const isLoggedIn = useSelector(getIsLoggedIn);

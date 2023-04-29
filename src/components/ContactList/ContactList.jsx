@@ -2,10 +2,10 @@ import { Box } from 'components/Box';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
-import { fetchContacts } from 'redux/contacts/contactsOperations';
+import { fetchContacts } from 'redux/index';
 import { Contact } from '../Contact/Contact';
 import { Item } from './ContactListStyled';
-import { getContacts, getError, getFilter } from 'redux/selectors';
+import { getContacts, getError, getFilter } from 'redux/index';
 
 export const ContactList = () => {
   const items = useSelector(getContacts);

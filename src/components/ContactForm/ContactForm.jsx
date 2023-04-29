@@ -3,9 +3,9 @@ import { nanoid } from 'nanoid';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts } from 'redux/selectors';
-import { addContact } from '../../redux/contacts/contactsOperations';
 
+import { getContacts } from 'redux/index';
+import { addContact } from 'redux/index';
 import {
   FormStyled,
   Input,

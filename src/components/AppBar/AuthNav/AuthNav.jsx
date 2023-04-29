@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { AuthNavMenu } from './AuthNavStyled';
 
 export const AuthNav = () => {
