@@ -6,11 +6,11 @@ import { Filter } from 'components/Filter/Filter';
 export default function Contacts() {
   return (
     <>
-      <Title title={'Phonebook'}/>
-      <ContactForm/>
-      <Title title={'Contacts'}/>
-      <Filter/>
-      <ContactList/>
+      <Title title={'Phonebook'} />
+      <ContactForm />
+      <Title title={'Contacts'} />
+      <Filter />
+      <ContactList />
     </>
   );
 }
