@@ -1,17 +1,15 @@
-import { Box } from 'components/Box';
+import { Box, SimpleGrid } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
 import { fetchContacts } from 'redux/index';
 import { Contact } from '../Contact/Contact';
-import { Item } from './ContactListStyled';
-import { getContacts, getError, getFilter } from 'redux/index';
+import { getContacts, getFilter } from 'redux/index';
 import { Loader } from 'components/Loader/Loader';
 import { getIsLoading } from 'redux/index';
 
 export const ContactList = () => {
   const items = useSelector(getContacts);
-  const error = useSelector(getError);
   const filter = useSelector(getFilter);
   const dispatch = useDispatch();
   const loading = useSelector(getIsLoading);
@@ -35,15 +33,14 @@ export const ContactList = () => {
   }, [dispatch]);
 
   return (
-    <Box as="ul">
+    <SimpleGrid as="ul" columns={4} spacing={5} minChildWidth={200}>
       {loading && <Loader />}
-      {error && <p>{error}</p>}
       {items &&
         contacts.map(contact => (
-          <Item key={contact.id}>
+          <Box as="li" listStyleType="none" key={contact.id}>
             <Contact item={contact}></Contact>
-          </Item>
+          </Box>
         ))}
-    </Box>
+    </SimpleGrid>
   );
 };

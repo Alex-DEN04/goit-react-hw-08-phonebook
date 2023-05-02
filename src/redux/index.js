@@ -13,7 +13,7 @@ export { setFilter } from './filter/filterActions';
 export {
   getContacts,
   getIsLoading,
-  getError,
+  getContactsError,
   getFilter,
   getUser,
   getEmail,

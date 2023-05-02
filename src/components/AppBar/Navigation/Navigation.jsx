@@ -1,16 +1,21 @@
-import React from 'react';
-import { NavMenu } from './NavigationStyled';
 import { useSelector } from 'react-redux';
 import { getIsLoggedIn } from 'redux/index';
+import { Link } from 'react-router-dom';
+import { Link as ReachLink } from '@reach/router';
+import { Flex } from '@chakra-ui/react';
 
 export const Navigation = () => {
   const isLoggedIn = useSelector(getIsLoggedIn);
   return (
-    <nav>
-      <NavMenu to="/" end>
+    <Flex as="nav" gap={3} fontSize="lg" fontWeight="bold">
+      <Link as={ReachLink} to="/">
         Home
-      </NavMenu>
-      {isLoggedIn && <NavMenu to="contacts">Contacts</NavMenu>}
-    </nav>
+      </Link>
+      {isLoggedIn && (
+        <Link as={ReachLink} to="contacts">
+          Contacts
+        </Link>
+      )}
+    </Flex>
   );
 };

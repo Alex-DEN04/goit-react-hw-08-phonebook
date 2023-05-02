@@ -1,7 +1,17 @@
+import { Flex, Text } from '@chakra-ui/react';
+
 export default function Home() {
   return (
-    <>
-      <h1>Welcome</h1>
-    </>
+    <Flex justify="center" p={15}>
+      <Text
+        as="h1"
+        fontFamily="heading"
+        fontSize="2xl"
+        fontWeight="bold"
+        justifyContent="center"
+      >
+        Welcome
+      </Text>
+    </Flex>
   );
 }
